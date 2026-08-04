@@ -1,3 +1,4 @@
+import Link from "next/link"; 
 export default function Navbar() {
   return (
     <nav className="border-b border-white/10 bg-black">
@@ -32,9 +33,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button className="rounded-lg bg-[#D4AF37] px-5 py-2.5 font-semibold text-black transition duration-200 hover:scale-105 hover:bg-[#E6C55A]">
+        <Link
+          href="/sign-up"
+          className="rounded-lg bg-[#D4AF37] px-5 py-2.5 font-semibold text-black transition duration-200 hover:scale-105 hover:bg-[#E6C55A]"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
     </nav>
   );

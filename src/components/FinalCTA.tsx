@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function FinalCTA() {
   return (
     <section className="px-6 py-28">
@@ -21,12 +22,12 @@ export default function FinalCTA() {
               before they reach production.
             </p>
 
-            <button
-              type="button"
-              className="mt-9 rounded-xl bg-[#D4AF37] px-7 py-3.5 font-semibold text-black transition duration-200 hover:scale-105 hover:bg-[#E6C55A]"
+            <Link
+              href="/sign-up"
+              className="mt-9 inline-flex rounded-xl bg-[#D4AF37] px-7 py-3.5 font-semibold text-black transition duration-200 hover:scale-105 hover:bg-[#E6C55A]"
             >
               Start Your First Review
-            </button>
+            </Link>
           </div>
         </div>
       </div>
