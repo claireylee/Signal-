@@ -1,4 +1,8 @@
+"use client";
 import { UserButton } from "@clerk/nextjs";
+import { useState } from "react";
+import CreateProjectModal from "../../components/CreateProjectModal";
+
 
 const projects = [
   {
@@ -14,6 +18,7 @@ const projects = [
 ];
 
 export default function DashboardPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <main className="min-h-screen bg-black text-white">
       <header className="border-b border-white/10">
@@ -44,6 +49,7 @@ export default function DashboardPage() {
 
           <button
             type="button"
+            onClick={() => setIsModalOpen(true)}
             className="rounded-xl bg-[#D4AF37] px-5 py-3 font-semibold text-black transition hover:bg-[#E6C55A]"
           >
             New Project
@@ -85,6 +91,10 @@ export default function DashboardPage() {
           ))}
         </div>
       </section>
+      <CreateProjectModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        />
     </main>
   );
 }
