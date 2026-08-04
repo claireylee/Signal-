@@ -24,3 +24,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-playfair-display), Georgia, serif;
 }
+html {
+  scroll-behavior: smooth;
+}
